@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/Mini-Jeux_images/Mario.gif');
+    background-image: url(../images/mini-jeux/mario.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
