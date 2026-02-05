@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/CSS/calculatrice.css">
+    <script src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/JS/calculatrice.js" defer></script>
+    <title>Calculatrice 🧮</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Calculatrice</h1>
+
+        <form>
+            <!-- Sélection des opérations -->
+            <fieldset class="operation-selection">
+                <legend>Choisis une opération :</legend>
+
+                <label>
+                    <input type="radio" name="operateurs" value="addition" onclick="determinerOperation('addition')" />
+                    Addition
+                </label>
+
+                <label>
+                    <input type="radio" name="operateurs" value="soustraction" onclick="determinerOperation('soustraction')" />
+                    Soustraction
+                </label>
+
+                <label>
+                    <input type="radio" name="operateurs" value="multiplication" onclick="determinerOperation('multiplication')" />
+                    Multiplication
+                </label>
+
+                <label>
+                    <input type="radio" name="operateurs" value="division" onclick="determinerOperation('division')" />
+                    Division
+                </label>
+            </fieldset>
+
+            <!-- Entrées utilisateurs -->
+            <label for="nombre1">Nombre 1 :</label>
+            <input type="text" id="nombre1" />
+            <span id="erreur1" class="erreur"></span>
+
+            <label for="nombre2">Nombre 2 :</label>
+            <input type="text" id="nombre2" />
+            <span id="erreur2" class="erreur"></span>
+
+            <button type="button" onclick="effectuerOperation()">Calculer</button>
+
+            <div id="resultat" class="resultat"></div>
+        </form>
+    </main>
+
+    <div class="menu-retour">
+        <a href="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/index.html" class="btn-retour">🏠 Retour à l'accueil</a>
+    </div>
+    
+</body>
+</html>

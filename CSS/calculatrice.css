@@ -1,0 +1,134 @@
+/* Importation de la police */
+@font-face {
+    font-family: 'Berlin Sans FB';
+    src: url('fonts/BerlinSansFB.ttf') format('truetype');
+}
+
+/* Style de base pour la page */
+body {
+    background-image: url('/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/Calculatrice_images/Calculatrice.gif');
+    background-size: 100px;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur pour centrer le contenu de la calculatrice */
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style pour le titre */
+h1 {
+    font-family: 'Berlin Sans FB', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style pour le formulaire de calculatrice */
+form {
+    width: 100%;
+}
+
+/* Style pour les options d'opération */
+.operation-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.operation-selection label {
+    color: #333;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Style pour les champs de texte */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Messages d'erreur */
+.erreur {
+    color: red;
+    font-size: 12px;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Style pour le bouton de calcul */
+button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Style du bouton quand on passe la souris dessus */
+button:hover {
+    background-color: #005f99;
+}
+
+/* Style pour l'affichage du résultat */
+.resultat {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu-retour {
+    text-align: left;
+    padding: 15px 20px;
+}
+
+.btn-retour {
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Berlin Sans FB', sans-serif;
+}
+
+.btn-retour:hover {
+    background-color: #ff9900;
+}

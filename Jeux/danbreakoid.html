@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🧿DanBreakoid🧿</title>
+<link rel="stylesheet" href="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/CSS/danbreakoid.css" />
+</head>
+<body>
+
+
+<div id="splash-screen">
+    <button id="start-btn"></button>
+</div>
+
+<div id="loading-screen">
+    <img src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/loading.webp" alt="Chargement..." id="loading-icon" />
+    <p>Chargement du jeu...</p>
+    <div id="progress-bar">
+    <div id="progress-fill"></div>
+    </div>
+</div>
+
+
+<div id="game-wrapper" style="display: none;">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <div id="game-ui">
+    <div id="score">Score: <span>0</span></div>
+    <div id="lives" class="vies-3">Vies: <span>3</span></div>
+    </div>
+
+    <div id="overlay"></div>
+</div>
+
+<div class="menu-retour">
+    <a href="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/index.html" class="btn-retour">🏠 Retour à l'accueil</a>
+</div>
+
+
+<script src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/lib/anime.min.js"></script>
+<script src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/JS/danbreakoid_utils.js"></script>
+<script src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/JS/danbreakoid_animations.js"></script>
+<script src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/JS/danbreakoid_game.js"></script>
+</body>
+</html>

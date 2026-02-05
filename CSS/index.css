@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/Mini-Jeux_images/Mario.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1{
+    color: navy;
+    text-align: center;
+}
+
+p, h3{
+    text-align: center;
+    color: whitesmoke;
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+}
+
+.surligne {
+    text-decoration: none;
+    color: gold;
+    font-size: 1.5em;
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.surligne:hover {
+    text-decoration: underline;
+    color: lightgreen;
+}
+
+#music-control {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#btn-music {
+    background-color: #ff0000;
+    color: white;
+    font-family: 'Berlin Sans FB', sans-serif;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+#btn-music:hover {
+    background-color: #cc0000;
+}

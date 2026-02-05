@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Berlin Sans FB';
+    src: url('fonts/BerlinSansFB.ttf') format('truetype');
+}
+
+/* Style général pour centrer le contenu */
+body {
+    background-image: url('/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/Tic-Tac-Toe_images/Tic-Tac-Toe.gif');
+    background-size: 100px;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Titres pour le jeu */
+h1 {
+    font-family: 'Berlin Sans FB', sans-serif;
+    font-size: 2.2em;
+    color: #302a2a;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.joueurs div {
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 0;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.message-erreur {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+}
+
+/* Tableau de jeu */
+.grille table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+/* Style des cellules de jeu */
+.grille td {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    color: #333;
+    background-color: #87cefa;
+    border: 2px solid #4682b4;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+}
+
+.grille td:hover {
+    background-color: #add8e6;
+}
+
+/* Joueur actif */
+.joueurActif {
+    background-color: #98fb98;
+    font-weight: bold;
+}
+
+/* Cellule invalide */
+.celluleinvalide {
+    background-color: #ff6b6b;
+    animation: flash 0.5s ease;
+}
+
+/* Cellule gagnante */
+.cellulegagnante {
+    background-color: #32cd32;
+    color: white;
+}
+
+/* Résultat du jeu */
+.resultat {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Boutons */
+button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#debuterPartie {
+    background-color: #4caf50;
+    color: white;
+}
+
+#debuterPartie:hover {
+    background-color: #45a049;
+}
+
+#terminerPartie {
+    background-color: #f44336;
+    color: white;
+}
+
+#terminerPartie:hover {
+    background-color: #d32f2f;
+}
+
+/* Animation pour cellule invalide */
+@keyframes flash {
+    0% { background-color: #ff6b6b; }
+    50% { background-color: #ffe5e5; }
+    100% { background-color: #ff6b6b; }
+}
+
+.menu-retour {
+    text-align: left;
+    padding: 15px 20px;
+}
+
+.btn-retour {
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Berlin Sans FB', sans-serif;
+}
+
+.btn-retour:hover {
+    background-color: #ff9900;
+}
