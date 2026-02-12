@@ -5,7 +5,7 @@
 
 /* Style général pour centrer le contenu */
 body {
-    background-image: url(images/tic-tac-toe/tic-tac-toe.gif);
+    background-image: url("../images/tic-tac-toe/tic-tac-toe.gif");
     background-size: 100px;
     background-color: #f0f4f8;
     display: flex;
