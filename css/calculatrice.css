@@ -1,8 +1,7 @@
-/* Importation de la police */
-@font-face {
-    font-family: 'Berlin Sans FB';
-    src: url('fonts/BerlinSansFB.ttf') format('truetype');
-}
+/* @font-face {
+font-family: 'Berlin Sans FB';
+src: url('fonts/BerlinSansFB.ttf') format('truetype');
+} */
 
 /* Style de base pour la page */
 body {
