@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Berlin Sans FB';
-    src: url('fonts/BerlinSansFB.ttf') format('truetype');
+    src: url('../fonts/BerlinSansFB.ttf') format('truetype');
 }
 
 /* Style général pour centrer le contenu */
 body {
-    background-image: url('/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/Tic-Tac-Toe_images/Tic-Tac-Toe.gif');
+    background-image: url('../images/tic-tac-toe/tic-tac-toe.gif');
     background-size: 100px;
     background-color: #f0f4f8;
     display: flex;

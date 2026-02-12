@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⭕️Tic-Tac-Toe❌</title>
-    <link rel="stylesheet" href="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/CSS/tic-tac-toe.css">
-    <script src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/JS/tic-tac-toe.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⭕️Tic-Tac-Toe❌</title>
+
+<link rel="stylesheet" href="../css/tic-tac-toe.css">
+<script src="../js/tic-tac-toe.js" defer></script>
 </head>
 
 <body>
-    <main>
-        <h1>Tic-Tac-Toe</h1>
+<main>
+    <h1>Tic-Tac-Toe</h1>
 
-        <section class="joueurs">
-            <div>
-                <label for="txtJoueur1">Joueur 1 :</label>
-                <input id="txtJoueur1" type="text" />
-                <span id="joueur1" class="message-erreur"></span>
-            </div>
-
-            <div>
-                <label for="txtJoueur2">Joueur 2 :</label>
-                <input id="txtJoueur2" type="text" />
-                <span id="joueur2" class="message-erreur"></span>
-            </div>
-        </section>
-
-        <section class="commandes">
-            <button id="debuterPartie" onclick="debuterPartie()">Débuter la partie</button>
-            <button id="terminerPartie" onclick="terminerPartie()">Terminer la partie</button>
-        </section>
-
-        <section class="grille">
-            <table cellspacing="0">
-                <tr>
-                    <td id="cellule1" onclick="validerClicCellule(1)"></td>
-                    <td id="cellule2" onclick="validerClicCellule(2)"></td>
-                    <td id="cellule3" onclick="validerClicCellule(3)"></td>
-                </tr>
-                <tr>
-                    <td id="cellule4" onclick="validerClicCellule(4)"></td>
-                    <td id="cellule5" onclick="validerClicCellule(5)"></td>
-                    <td id="cellule6" onclick="validerClicCellule(6)"></td>
-                </tr>
-                <tr>
-                    <td id="cellule7" onclick="validerClicCellule(7)"></td>
-                    <td id="cellule8" onclick="validerClicCellule(8)"></td>
-                    <td id="cellule9" onclick="validerClicCellule(9)"></td>
-                </tr>
-            </table>
-        </section>
-
-        <div id="resultat" class="resultat"></div>
-    </main>
-
-    <div class="menu-retour">
-        <a href="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/index.html" class="btn-retour">🏠 Retour à l'accueil</a>
+    <section class="joueurs">
+    <div>
+        <label for="txtJoueur1">Joueur 1 :</label>
+        <input id="txtJoueur1" type="text">
+        <span id="joueur1" class="message-erreur"></span>
     </div>
-    
-</body>
 
+    <div>
+        <label for="txtJoueur2">Joueur 2 :</label>
+        <input id="txtJoueur2" type="text">
+        <span id="joueur2" class="message-erreur"></span>
+    </div>
+    </section>
+
+    <section class="commandes">
+    <button id="debuterPartie" onclick="debuterPartie()">Débuter la partie</button>
+    <button id="terminerPartie" onclick="terminerPartie()">Terminer la partie</button>
+    </section>
+
+    <section class="grille">
+    <table cellspacing="0">
+        <tr>
+        <td id="cellule1" onclick="validerClicCellule(1)"></td>
+        <td id="cellule2" onclick="validerClicCellule(2)"></td>
+        <td id="cellule3" onclick="validerClicCellule(3)"></td>
+        </tr>
+        <tr>
+        <td id="cellule4" onclick="validerClicCellule(4)"></td>
+        <td id="cellule5" onclick="validerClicCellule(5)"></td>
+        <td id="cellule6" onclick="validerClicCellule(6)"></td>
+        </tr>
+        <tr>
+        <td id="cellule7" onclick="validerClicCellule(7)"></td>
+        <td id="cellule8" onclick="validerClicCellule(8)"></td>
+        <td id="cellule9" onclick="validerClicCellule(9)"></td>
+        </tr>
+    </table>
+    </section>
+
+    <div id="resultat" class="resultat"></div>
+</main>
+
+<div class="menu-retour">
+    
+    <a href="../index.html" class="btn-retour">🏠 Retour à l'accueil</a>
+</div>
+</body>
 </html>
