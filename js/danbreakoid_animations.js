@@ -50,7 +50,7 @@ function showVictoryAnimation() {
 
     overlay.innerHTML = `
     <div style="text-align:center;">
-        <img src="../images/danBreakoid_images/succes.png" alt="Victoire" style="max-width: 200px; margin: 0 auto 10px;">
+        <img src="../images/danbreakoid/succes.png" alt="Victoire" style="max-width: 200px; margin: 0 auto 10px;">
         <div>🎉 BRAVO! Niveau réussi 🎉</div>
     </div>
     `;
@@ -65,7 +65,7 @@ function showVictoryAnimation() {
     if (level > 3) level = 1;
 
     document.body.style.background =
-    `url('../images/danBreakoid_images/bg_niveau${level}.png') no-repeat center center fixed`;
+    `url('../images/danbreakoid/bg_niveau${level}.png') no-repeat center center fixed`;
     document.body.style.backgroundSize = "cover";
 
     createBricks();
@@ -113,4 +113,5 @@ function showGameOverAnimation() {
         });
     }, 5000);
 }
+
 
