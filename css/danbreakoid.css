@@ -8,14 +8,14 @@ html, body, #game-container {
 }
 
 html {
-    background: url("/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/Bricks_bg.jpg") no-repeat center center fixed;
-    background-size: cover;
+background: url("../images/danbreakoid/Bricks_bg.jpg") no-repeat center center fixed;
+background-size: cover;
 }
 
 #splash-screen {
     width: 100vw;
     height: 100vh;
-    background: url("/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/splashscreen_1100_720.png") no-repeat center center;
+    background: url("../images/danbreakoid/splashscreen_1100_720.png") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ html {
 }
 
 #start-btn {
-    background: url("/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/btnStart.png") no-repeat center center;
+    background: url("../images/danbreakoid/btnStart.png") no-repeat center center;
     background-size: contain;
     display: none;
     width: 200px;

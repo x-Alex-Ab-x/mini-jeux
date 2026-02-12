@@ -2,10 +2,10 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 const ballImage = new Image();
-ballImage.src = "/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/ball.png";
+ballImage.src = "../images/DanBreakoid_images/ball.png";
 
 const paddleImage = new Image();
-paddleImage.src = "/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/paddle.png";
+paddleImage.src = "../images/danBreakoid_images/paddle.png";
 
 let paddle = {
     width: 120,
