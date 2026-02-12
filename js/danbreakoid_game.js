@@ -2,10 +2,10 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 const ballImage = new Image();
-ballImage.src = "../../images/danbreakoid/ball.png";
+ballImage.src = "../images/danbreakoid/ball.png";
 
 const paddleImage = new Image();
-paddleImage.src = "../../images/danbreakoid/paddle.png";
+paddleImage.src = "../images/danbreakoid/paddle.png";
 
 let paddle = {
     width: 120,
@@ -257,6 +257,8 @@ function resizeCanvas() {
 
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
+
+
 
 
 
