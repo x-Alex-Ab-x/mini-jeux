@@ -8,7 +8,7 @@ html, body, #game-container {
 }
 
 html {
-background: url("../images/danbreakoid/Bricks_bg.jpg") no-repeat center center fixed;
+background: url("../images/danbreakoid/bricks_bg.jpg") no-repeat center center fixed;
 background-size: cover;
 }
 

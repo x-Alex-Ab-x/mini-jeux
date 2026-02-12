@@ -80,8 +80,8 @@ function showGameOverAnimation() {
 
     overlay.innerHTML = `
     <div style="text-align:center;">
-        <img src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/redeyes.png" alt="Perdu" style="max-width: 180px; margin:0 auto 10px;">
-        <img src="/Users/Alexa/OneDrive/Desktop/Mini-Jeux/Images/DanBreakoid_images/rire.png" alt="Rire" style="max-width: 100px; margin:0 auto 10px;">
+        <img src="../images/danbreakoid/redeyes.png" alt="Perdu" style="max-width: 180px; margin:0 auto 10px;">
+        <img src="../images/danbreakoid/rire.png" alt="Rire" style="max-width: 100px; margin:0 auto 10px;">
         <div>☠ GAME OVER ☠</div>
         <button id="retry-btn" style="
             margin-top: 20px;
