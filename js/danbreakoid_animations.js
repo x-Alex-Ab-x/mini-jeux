@@ -113,3 +113,4 @@ function showGameOverAnimation() {
         });
     }, 5000);
 }
+
