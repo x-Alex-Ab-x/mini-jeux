@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roche - Papier - Ciseaux</title>
+
+  <!-- Depuis /jeux -> remonter d’un niveau -->
+  <link rel="stylesheet" href="../css/roche-papier-ciseau.css" />
+  <script src="../js/roche-papier-ciseau.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="titre">Roche - Papier - Ciseaux</h1>
+
+    <section class="container_header" aria-label="Scores">
+      <p>Joueur : <span id="Jscore">0</span></p>
+      <p>Ordinateur : <span id="Oscore">0</span></p>
+    </section>
+
+    <section class="container_images" aria-label="Choix">
+      <figure class="choice">
+        <figcaption>Toi</figcaption>
+        <img src="../images/rpc/ciseau.png" alt="Choix du joueur" id="Jimage" />
+      </figure>
+
+      <figure class="choice">
+        <figcaption>Ordinateur</figcaption>
+        <img src="../images/rpc/o_ciseau.png" alt="Choix de l'ordinateur" id="Oimage" />
+      </figure>
+    </section>
+
+    <section class="container_boutons" aria-label="Boutons de choix">
+      <button class="btn roche" data-choice="roche">Roche</button>
+      <button class="btn papier" data-choice="papier">Papier</button>
+      <button class="btn ciseau" data-choice="ciseau">Ciseau</button>
+    </section>
+
+    <section class="message" aria-live="polite">
+      <span id="Message">Choisis une option 👇</span>
+    </section>
+
+    <section class="actions">
+      <button id="reset" class="btn-secondary">Réinitialiser le score</button>
+      <a class="btn-secondary" href="../index.html">🏠 Retour au menu</a>
+    </section>
+  </main>
+</body>
+</html>
