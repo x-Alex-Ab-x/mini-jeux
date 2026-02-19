@@ -2,7 +2,11 @@ let Tableau = [];
 let partieEnCours = false;
 let tourJoueur1 = true;
 let coups = 0;
+let scoreX = 0;
+let scoreO = 0;
 const INTERVALLE_ERREUR = 500;
+const scoreXDisplay = document.getElementById("scoreX");
+const scoreODisplay = document.getElementById("scoreO");
 
 window.onload = function () {
     document.getElementById("terminerPartie").disabled = true;
@@ -120,19 +124,20 @@ function identifierGagnant(a, b, c) {
         document.getElementById("cellule" + num).className = "cellulegagnante";
     });
 
-    const gagnant = tourJoueur1 ? document.getElementById("txtJoueur1").value : document.getElementById("txtJoueur2").value;
+    const symboleGagnant = tourJoueur1 ? "X" : "O";
+    const gagnant = tourJoueur1
+        ? document.getElementById("txtJoueur1").value
+        : document.getElementById("txtJoueur2").value;
+
+    // 🔹 Mise à jour du score
+    if (symboleGagnant === "X") {
+        scoreX++;
+        scoreXDisplay.textContent = scoreX;
+    } else {
+        scoreO++;
+        scoreODisplay.textContent = scoreO;
+    }
+
     document.getElementById("resultat").innerText = `${gagnant} a gagné la partie !`;
     terminerPartie();
-}
-
-function terminerPartie() {
-    document.getElementById("txtJoueur1").disabled = false;
-    document.getElementById("txtJoueur2").disabled = false;
-    document.getElementById("txtJoueur1").className = "";
-    document.getElementById("txtJoueur2").className = "";
-
-    document.getElementById("debuterPartie").disabled = false;
-    document.getElementById("terminerPartie").disabled = true;
-
-    partieEnCours = false;
 }
