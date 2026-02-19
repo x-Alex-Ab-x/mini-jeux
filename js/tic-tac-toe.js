@@ -10,6 +10,13 @@ const scoreODisplay = document.getElementById("scoreO");
 
 window.onload = function () {
     document.getElementById("terminerPartie").disabled = true;
+
+    document.getElementById("resetScore").addEventListener("click", () => {
+    scoreX = 0;
+    scoreO = 0;
+    scoreXDisplay.textContent = "0";
+    scoreODisplay.textContent = "0";
+    });
 };
 
 function debuterPartie() {
@@ -87,8 +94,12 @@ function validerClicCellule(numero) {
             enregistrerInfos(numero);
             coups++;
             verifierGagnant();
+
+            // ✅ Ne change de tour QUE si la partie continue
+            if (partieEnCours) {
             tourJoueur1 = !tourJoueur1;
             preparerTourJoueur();
+            }
         }
     }
 }
@@ -140,4 +151,14 @@ function identifierGagnant(a, b, c) {
 
     document.getElementById("resultat").innerText = `${gagnant} a gagné la partie !`;
     terminerPartie();
+}
+
+function terminerPartie() {
+    partieEnCours = false;
+    document.getElementById("debuterPartie").disabled = false;
+    document.getElementById("terminerPartie").disabled = true;
+
+  // optionnel (si tu veux pouvoir changer les noms entre les parties)
+  // document.getElementById("txtJoueur1").disabled = false;
+  // document.getElementById("txtJoueur2").disabled = false;
 }
