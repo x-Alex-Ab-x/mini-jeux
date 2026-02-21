@@ -1,207 +1,257 @@
-html, body, #game-container {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+html,
+body,
+#game-container {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
 html {
-background: url("../images/danbreakoid/bricks_bg.jpg") no-repeat center center fixed;
-background-size: cover;
+  background: url("../images/danbreakoid/bricks_bg.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center; /* centre verticalement */
+  min-height: 100vh;
 }
 
 #splash-screen {
-    width: 100vw;
-    height: 100vh;
-    background: url("../images/danbreakoid/splashscreen_1100_720.png") no-repeat center center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/danbreakoid/splashscreen_1100_720.png") no-repeat
+    center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
 #start-btn {
-    background: url("../images/danbreakoid/btnStart.png") no-repeat center center;
-    background-size: contain;
-    display: none;
-    width: 200px;
-    height: 80px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    animation-delay: 3s;
+  background: url("../images/danbreakoid/btnStart.png") no-repeat center center;
+  background-size: contain;
+  display: none;
+  width: 200px;
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation-delay: 3s;
 }
 
 #gameCanvas {
-    border: 10px solid white;
-    box-shadow: 0 0 20px rgba(255,255,255,0.5);
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+  border: 10px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 #loading-screen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 28px;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  z-index: 10;
 }
 
 #loading-icon {
-    width: 100px;
-    height: 100px;
-    animation: rotate 2s linear infinite;
-    margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  animation: rotate 2s linear infinite;
+  margin-bottom: 20px;
 }
 
 #progress-bar {
-    width: 300px;
-    height: 20px;
-    background-color: #333;
-    border: 2px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 20px;
+  width: 300px;
+  height: 20px;
+  background-color: #333;
+  border: 2px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 #progress-fill {
-    width: 0%;
-    height: 100%;
-    background-color: #ffcc00;
-    transition: width 1s ease-in-out;
+  width: 0%;
+  height: 100%;
+  background-color: #ffcc00;
+  transition: width 1s ease-in-out;
 }
 
 #game-ui {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    padding: 0 20px;
-    z-index: 15;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  z-index: 15;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #score {
-    text-align: left;
+  text-align: left;
 }
 
 #lives {
-    font-size: 28px;
-    color: green;
-    display: flex;
-    gap: 5px;
-    text-align: center;
+  font-size: 28px;
+  color: green;
+  display: flex;
+  gap: 5px;
+  text-align: center;
 }
 
 #lives.critical {
-    color: red;
-    animation: clignoter 1s infinite;
+  color: red;
+  animation: clignoter 1s infinite;
 }
 
 @keyframes clignoter {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-#lives.vies-3 { background-position: 0 0; }
-#lives.vies-2 { background-position: 0 -30px; }
-#lives.vies-1 { background-position: 0 -60px; }
-#lives.vies-0 { background-position: 0 -90px; }
+#lives.vies-3 {
+  background-position: 0 0;
+}
+#lives.vies-2 {
+  background-position: 0 -30px;
+}
+#lives.vies-1 {
+  background-position: 0 -60px;
+}
+#lives.vies-0 {
+  background-position: 0 -90px;
+}
 
 .blinking {
-    animation: blink 1s infinite;
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 .clignote {
-    animation: clignoter 1s infinite;
+  animation: clignoter 1s infinite;
 }
 
 @keyframes clignoter {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 48px;
-    color: white;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 20;
-    transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 48px;
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
 }
 
 @keyframes fadeInOut {
-    0% { opacity: 0; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(0.8); }
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
 }
 
 .fade-in {
-    animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .menu-retour {
-    text-align: left;
-    padding: 15px 20px;
+  text-align: left;
+  padding: 15px 20px;
 }
 
 .btn-retour {
-    background-color: #ffcc00;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 18px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
-    font-family: 'Berlin Sans FB', sans-serif;
+  background-color: #ffcc00;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  font-family: "Berlin Sans FB", sans-serif;
 }
 
 .btn-retour:hover {
-    background-color: #ff9900;
+  background-color: #ff9900;
 }
-
-
-
